@@ -3,7 +3,7 @@ layout: post
 title: "Dari Spektrum Nasional ke Aksi Regional: Ketua Umum IKA PMII Tegaskan Komitmen Kapitalisasi Jaringan untuk Mendukung NTB sebagai Episentrum Pariwisata"
 date: 2025-07-10 15:34:21 +0800
 author: "PKC PMII Bali Nusra"
-image: "https://raw.githubusercontent.com/websitepmiibalinusra/websitepmiibalinusra.github.io/main/assets/rilis/dari-spektrum-nasional-ke-aksi-regional-ketua-umum-ika-pmii-tegaskan-komitmen-kapitalisasi-jaringan-untuk-mendukung-ntb-sebagai-episentrum-pariwisata.png"
+image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/dari-spektrum-nasional-ke-aksi-regional-ketua-umum-ika-pmii-tegaskan-komitmen-kapitalisasi-jaringan-untuk-mendukung-ntb-sebagai-episentrum-pariwisata.png"
 image_caption: "Arahan Ketua PB IKA PMII"
 ---
 
