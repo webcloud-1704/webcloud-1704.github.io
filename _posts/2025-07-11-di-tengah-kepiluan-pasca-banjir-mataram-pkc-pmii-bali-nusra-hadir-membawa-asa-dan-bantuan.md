@@ -3,7 +3,7 @@ layout: post
 title: "Di Tengah Kepiluan Pasca-Banjir Mataram, PKC PMII Bali Nusra Hadir Membawa Asa dan Bantuan"
 date: 2025-07-11 14:34:59 +0800
 author: "PKC PMII Bali Nusra"
-image: "https://raw.githubusercontent.com/websitepmiibalinusra/websitepmiibalinusra.github.io/main/assets/rilis/di-tengah-kepiluan-pasca-banjir-mataram-pkc-pmii-bali-nusra-hadir-membawa-asa-dan-bantuan.png"
+image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/di-tengah-kepiluan-pasca-banjir-mataram-pkc-pmii-bali-nusra-hadir-membawa-asa-dan-bantuan.png"
 image_caption: "Penyaluran Bantuan oleh PKC PMII Bali Nusra"
 ---
 
