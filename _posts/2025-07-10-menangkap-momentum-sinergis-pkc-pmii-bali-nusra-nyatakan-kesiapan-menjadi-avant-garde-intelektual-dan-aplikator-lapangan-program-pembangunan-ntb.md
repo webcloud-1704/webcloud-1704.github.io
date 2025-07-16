@@ -3,7 +3,7 @@ layout: post
 title: "Menangkap Momentum Sinergis: PKC PMII Bali Nusra Nyatakan Kesiapan Menjadi Avant-Garde Intelektual dan Aplikator Lapangan Program Pembangunan NTB"
 date: 2025-07-10 15:39:32 +0800
 author: "PKC PMII Bali Nusra"
-image: "https://raw.githubusercontent.com/websitepmiibalinusra/websitepmiibalinusra.github.io/main/assets/rilis/menangkap-momentum-sinergis-pkc-pmii-bali-nusra-nyatakan-kesiapan-menjadi-avant-garde-intelektual-dan-aplikator-lapangan-program-pembangunan-ntb.png"
+image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/menangkap-momentum-sinergis-pkc-pmii-bali-nusra-nyatakan-kesiapan-menjadi-avant-garde-intelektual-dan-aplikator-lapangan-program-pembangunan-ntb.png"
 image_caption: "Ketua PKC dalam Penyerahan Bantuan Korban Banjir Mataram"
 ---
 
