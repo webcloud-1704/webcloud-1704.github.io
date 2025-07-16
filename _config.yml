@@ -1,0 +1,67 @@
+#======================================================
+# PENGATURAN SITUS UTAMA
+# Informasi dasar yang digunakan di seluruh situs.
+# Dapat diakses menggunakan {{ site.title }}, {{ site.description }}, dll.
+#======================================================
+
+title: PKC PMII Bali Nusra
+email: pmiibalinusra.official@gmail.com
+description: >- # Deskripsi situs untuk SEO. Tanda `>-` menggabungkan teks menjadi satu baris.
+  Website Resmi Pengurus Koordinator Cabang (PKC) Pergerakan Mahasiswa Islam Indonesia (PMII) Bali-Nusa Tenggara.
+  Mendorong inovasi dan pergerakan mahasiswa yang berlandaskan Ahlussunnah wal Jama'ah.
+
+# URL produksi (live) situs Anda. Penting untuk SEO.
+# PASTIKAN BENAR dan tanpa garis miring (/) di akhir.
+url: "https://pmiibalinusra.or.id"
+
+# Biarkan kosong ("") jika situs berada di domain utama (root).
+# Isi dengan nama subfolder jika situs ada di dalam subfolder, contoh: "/blog".
+baseurl: ""
+
+# Gambar logo default untuk social sharing (digunakan oleh jekyll-seo-tag).
+# Path harus dimulai dari root folder situs Anda.
+logo: /assets/images/logo1.png
+
+#======================================================
+# PENGATURAN MEDIA SOSIAL
+# Sentralisasi link media sosial agar mudah diubah dan diakses.
+# Contoh akses: {{ site.social.youtube }}
+#======================================================
+
+social:
+  youtube: https://youtube.com/@pkcpmiibalinusra
+  facebook: https://facebook.com/pkcpmiibalinusatenggara
+  instagram: https://instagram.com/pkc.pmiibalinusra
+
+#======================================================
+# PENGATURAN BUILD
+# Konfigurasi teknis untuk proses build Jekyll.
+#======================================================
+
+# Tema tidak digunakan (`null`) karena layout menggunakan HTML dan Tailwind CSS kustom.
+theme: null
+
+# Plugin yang diaktifkan untuk fungsionalitas tambahan.
+plugins:
+  - jekyll-feed    # Membuat feed RSS/Atom secara otomatis.
+  - jekyll-seo-tag # Membuat tag meta SEO (Open Graph, Twitter Cards) secara otomatis.
+
+# Struktur URL untuk postingan agar rapi dan SEO-friendly.
+# Contoh: /rilis/2024/07/15/judul-postingan
+permalink: /rilis/:year/:month/:day/:title
+
+#======================================================
+# EXCLUDE (PENGECUALIAN)
+# Daftar file dan folder yang diabaikan oleh Jekyll saat proses build.
+# Berguna untuk menjaga kebersihan folder hasil (_site).
+#======================================================
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
