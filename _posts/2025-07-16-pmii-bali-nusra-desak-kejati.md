@@ -26,10 +26,10 @@ Ia menilai bahwa PKC PMII Bali Nusra memandang praktik ini berpotensi kuat melan
 Sorotan terhadap isi tersebut, lanjutnya, semakin tajam setelah salah satu media daerah menghapus cepat berita terkait pemanggilan sejumlah anggota DPRD NTB oleh Kejaksaan Tinggi NTB. Fenomena ini memunculkan kekhawatiran publik akan adanya upaya menghambat proses penegakan hukum.
 
 PKC PMII Bali Nusra menyebut situasi ini sebagai “krisis integritas dan transparansi” dalam tata kelola pemerintahan daerah. Atas dasar itu, PKC PMII Bali Nusra menegaskan beberapa sikap, yaitu:
-1.) Mendesak Kejaksaan Tinggi NTB untuk segera memanggil, memeriksa, dan menindak semua pihak yang diduga terlibat, baik penerima maupun pemberi dana “siluman”, serta menelusuri asal-usul uang tersebut.
-2.) Meminta pimpinan DPRD NTB untuk bersikap tegas dan memberikan klarifikasi resmi kepada publik, sekaligus melakukan investigasi internal agar kasus ini tidak menjadi “bola liar”.
-3.) Mengajak masyarakat, khususnya pemuda dan mahasiswa, untuk mengawal proses hukum dan melaporkan jika ada indikasi intervensi maupun upaya pembungkaman.
-4.) Mendesak evaluasi total sistem alokasi dan penggunaan dana pokir agar kasus serupa tidak terulang.
+1) Mendesak Kejaksaan Tinggi NTB untuk segera memanggil, memeriksa, dan menindak semua pihak yang diduga terlibat, baik penerima maupun pemberi dana “siluman”, serta menelusuri asal-usul uang tersebut.
+2) Meminta pimpinan DPRD NTB untuk bersikap tegas dan memberikan klarifikasi resmi kepada publik, sekaligus melakukan investigasi internal agar kasus ini tidak menjadi “bola liar”.
+3) Mengajak masyarakat, khususnya pemuda dan mahasiswa, untuk mengawal proses hukum dan melaporkan jika ada indikasi intervensi maupun upaya pembungkaman.
+4) Mendesak evaluasi total sistem alokasi dan penggunaan dana pokir agar kasus serupa tidak terulang.
 
 PKC PMII Bali Nusra juga menyatakan siap mengawal kasus ini hingga tuntas, termasuk melalui langkah konstitusional seperti aksi demonstrasi maupun pelaporan resmi apabila proses penegakan hukum dinilai lamban.
 
