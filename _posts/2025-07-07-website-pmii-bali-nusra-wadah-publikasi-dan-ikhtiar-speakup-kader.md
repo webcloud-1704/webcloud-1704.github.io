@@ -3,7 +3,7 @@ layout: post
 title: "Website PMII Bali Nusra: Wadah Publikasi dan Ikhtiar \"SpeakUp\" Kader"
 date: 2025-07-07 00:19:21 +0800
 author: "PKC PMII Bali Nusra"
-image: "https://raw.githubusercontent.com/websitepmiibalinusra/websitepmiibalinusra.github.io/main/assets/rilis/website-pmii-bali-nusra-wadah-publikasi-dan-ikhtiar-speakup-kader.png"
+image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/website-pmii-bali-nusra-wadah-publikasi-dan-ikhtiar-speakup-kader.png"
 image_caption: "Website PMII Bali Nusra"
 ---
 
