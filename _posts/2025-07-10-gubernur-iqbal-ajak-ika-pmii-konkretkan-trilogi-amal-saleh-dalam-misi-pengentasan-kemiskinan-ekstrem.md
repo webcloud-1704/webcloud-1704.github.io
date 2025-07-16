@@ -3,7 +3,7 @@ layout: post
 title: "Gubernur Iqbal Ajak IKA PMII Konkretkan Trilogi 'Amal Saleh' dalam Misi Pengentasan Kemiskinan Ekstrem"
 date: 2025-07-10 15:31:09 +0800
 author: "PKC PMII Bali Nusra"
-image: "https://raw.githubusercontent.com/websitepmiibalinusra/websitepmiibalinusra.github.io/main/assets/rilis/gubernur-iqbal-ajak-ika-pmii-konkretkan-trilogi-amal-saleh-dalam-misi-pengentasan-kemiskinan-ekstrem.png"
+image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/gubernur-iqbal-ajak-ika-pmii-konkretkan-trilogi-amal-saleh-dalam-misi-pengentasan-kemiskinan-ekstrem.png"
 image_caption: "Sambutan Gubernur NTB"
 ---
 
