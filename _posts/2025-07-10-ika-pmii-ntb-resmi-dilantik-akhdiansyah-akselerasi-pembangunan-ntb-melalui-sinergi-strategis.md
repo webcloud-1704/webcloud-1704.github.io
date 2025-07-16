@@ -3,7 +3,7 @@ layout: post
 title: "IKA PMII NTB Resmi Dilantik, Akhdiansyah: Akselerasi Pembangunan NTB Melalui Sinergi Strategis"
 date: 2025-07-10 15:24:32 +0800
 author: "PKC PMII Bali Nusra"
-image: "https://raw.githubusercontent.com/websitepmiibalinusra/websitepmiibalinusra.github.io/main/assets/rilis/ika-pmii-ntb-resmi-dilantik-akhdiansyah-akselerasi-pembangunan-ntb-melalui-sinergi-strategis.png"
+image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/ika-pmii-ntb-resmi-dilantik-akhdiansyah-akselerasi-pembangunan-ntb-melalui-sinergi-strategis.png"
 image_caption: "Pengantar Ketua PW IKA PMI NTB"
 ---
 
