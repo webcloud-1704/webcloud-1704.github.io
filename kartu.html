@@ -90,6 +90,8 @@ title: Kartu
                 <form id="registration-form" class="space-y-6" novalidate>
                     <!-- Input Fields: Setiap field memiliki animasi on-scroll -->
                     <div class="animate-on-scroll"><label for="nama-lengkap" class="block text-sm font-medium text-gray-700 mb-1.5">Nama Lengkap</label><input type="text" id="nama-lengkap" name="Nama Lengkap" placeholder="Nama Lengkap" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
+                    <div class="animate-on-scroll"><label for="nik" class="block text-sm font-medium text-gray-700 mb-1.5">Nomor Induk Kependudukan</label><input type="text" id="nik" name="Nomor Induk Kependudukan" placeholder="Masukkan 16 digit NIK" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
+                    <div class="animate-on-scroll"><label for="ttl" class="block text-sm font-medium text-gray-700 mb-1.5">Tempat dan Tanggal Lahir</label><input type="text" id="ttl" name="Tempat dan Tanggal Lahir" placeholder="Mataram, 17 Agustus 2002" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
                     <div class="animate-on-scroll"><label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email</label><input type="email" id="email" name="Email" placeholder="email@gmail.com" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
                     <div class="animate-on-scroll"><label for="telepon" class="block text-sm font-medium text-gray-700 mb-1.5">Telepon</label><input type="tel" id="telepon" name="Telepon" placeholder="081234567890" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
                     <div class="animate-on-scroll"><label for="rayon" class="block text-sm font-medium text-gray-700 mb-1.5">Rayon/Fakultas</label><input type="text" id="rayon" name="Rayon/Fakultas" placeholder="Rayon Al-Jazari Fakultas Teknik" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
@@ -97,8 +99,10 @@ title: Kartu
                     <div class="animate-on-scroll"><label for="cabang" class="block text-sm font-medium text-gray-700 mb-1.5">Cabang (Kabupaten/Kota)</label><input type="text" id="cabang" name="Cabang" placeholder="Cabang Kota Mataram" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
                     <!-- Input untuk upload file sertifikat -->
                     <div class="animate-on-scroll"><label class="block text-sm font-medium text-gray-700 mb-1.5">Sertifikat MAPABA (jpg/png)</label><label for="sertifikat-mapaba" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50"><i data-lucide="upload-cloud" class="w-5 h-5 text-gray-500"></i><span class="text-sm text-gray-500 file-name">Pilih file...</span></label><input type="file" id="sertifikat-mapaba" name="Sertifikat MAPABA" class="hidden" accept="image/jpeg, image/png" required></div>
+                    <!-- Input untuk upload file E-KTP -->
+                    <div class="animate-on-scroll"><label class="block text-sm font-medium text-gray-700 mb-1.5">Foto E-KTP (jpg/png)</label><label for="e-ktp" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50"><i data-lucide="credit-card" class="w-5 h-5 text-gray-500"></i><span class="text-sm text-gray-500 file-name">Pilih file...</span></label><input type="file" id="e-ktp" name="Foto E-KTP" class="hidden" accept="image/jpeg, image/png" required></div>
                     <!-- Input untuk upload file foto -->
-                    <div class="animate-on-scroll"><label class="block text-sm font-medium text-gray-700 mb-1.5">Foto 4x6 (jpg/png)</label><label for="foto" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50"><i data-lucide="image" class="w-5 h-5 text-gray-500"></i><span class="text-sm text-gray-500 file-name">Pilih file...</span></label><input type="file" id="foto" name="Foto" class="hidden" accept="image/jpeg, image/png" required></div>
+                    <div class="animate-on-scroll"><label class="block text-sm font-medium text-gray-700 mb-1.5">Foto (4×6) Memakai Jas PMII (jpg/png)</label><label for="foto" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50"><i data-lucide="image" class="w-5 h-5 text-gray-500"></i><span class="text-sm text-gray-500 file-name">Pilih file...</span></label><input type="file" id="foto" name="Foto" class="hidden" accept="image/jpeg, image/png" required></div>
                     
                     <!-- Elemen untuk menampilkan pesan status (error/sukses) -->
                     <div id="status-message" class="message-box"></div>
@@ -148,7 +152,7 @@ title: Kartu
         const buttonSpinner = document.getElementById('button-spinner');
         
         // --- URL Endpoint Google Apps Script ---
-        const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbyneDI2K-t8BGaUJQLw7zt09Na_j07rq7I8VHO-9Wc68Ji-nirRrm9JUpdpS1xjSuqHpA/exec';
+        const googleScriptUrl = 'https://script.google.com/macros/s/AKfycby2N0stIy98Jpdo0yyVXKPIXWC2IlqfjL5yNKMmjNgkaFuZ91eH_SaOhYDutsc2jIM/exec';
 
         // --- Logika UI Dasar (Preloader, Menu, Copyright, Animasi Scroll) ---
         const preloader = document.getElementById('preloader');
@@ -231,17 +235,20 @@ title: Kartu
                     showMessage("Mengonversi file gambar...", false);
                     const fotoFile = document.getElementById('foto').files[0];
                     const sertifikatFile = document.getElementById('sertifikat-mapaba').files[0];
+                    const eKtpFile = document.getElementById('e-ktp').files[0];
 
-                    const [fotoBase64, sertifikatBase64] = await Promise.all([
+                    const [fotoBase64, sertifikatBase64, eKtpBase64] = await Promise.all([
                         readFileAsDataURL(fotoFile),
-                        readFileAsDataURL(sertifikatFile)
+                        readFileAsDataURL(sertifikatFile),
+                        readFileAsDataURL(eKtpFile)
                     ]);
                     
                     // 5. Siapkan payload (data lengkap) untuk dikirim
                     const payload = {
                         formData: formDataObject,
                         fotoFile: { name: fotoFile.name, type: fotoFile.type, data: fotoBase64.split(',')[1] },
-                        sertifikatFile: { name: sertifikatFile.name, type: sertifikatFile.type, data: sertifikatBase64.split(',')[1] }
+                        sertifikatFile: { name: sertifikatFile.name, type: sertifikatFile.type, data: sertifikatBase64.split(',')[1] },
+                        eKtpFile: { name: eKtpFile.name, type: eKtpFile.type, data: eKtpBase64.split(',')[1] }
                     };
 
                     // 6. Kirim data ke Google Apps Script
@@ -255,7 +262,7 @@ title: Kartu
                     
                     // 7. Proses respons dari server
                     if (!response.ok) {
-                       throw new Error(`Server merespons dengan error (status: ${response.status}).`);
+                        throw new Error(`Server merespons dengan error (status: ${response.status}).`);
                     }
 
                     const result = await response.json();
