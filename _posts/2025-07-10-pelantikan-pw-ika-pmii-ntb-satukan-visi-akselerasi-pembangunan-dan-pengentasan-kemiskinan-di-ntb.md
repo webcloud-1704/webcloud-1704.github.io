@@ -3,7 +3,7 @@ layout: post
 title: "Pelantikan PW IKA PMII NTB, Satukan Visi Akselerasi Pembangunan dan Pengentasan Kemiskinan di NTB"
 date: 2025-07-10 15:19:18 +0800
 author: "PKC PMII Bali Nusra"
-image: "https://raw.githubusercontent.com/websitepmiibalinusra/websitepmiibalinusra.github.io/main/assets/rilis/pelantikan-pw-ika-pmii-ntb-satukan-visi-akselerasi-pembangunan-dan-pengentasan-kemiskinan-di-ntb.png"
+image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/pelantikan-pw-ika-pmii-ntb-satukan-visi-akselerasi-pembangunan-dan-pengentasan-kemiskinan-di-ntb.png"
 image_caption: "Foto Bersama IKA PMII NTB"
 ---
 
