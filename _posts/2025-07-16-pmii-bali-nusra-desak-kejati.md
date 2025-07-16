@@ -6,6 +6,7 @@ author: "PKC PMII Bali Nusra"
 image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/rilis10.png"
 image_caption: "PKC PMII Bali Nusra"
 ---
+
 Pengurus Koordinator Cabang Pergerakan Mahasiswa Islam Indonesia (PKC PMII) Bali Nusa Tenggara menyatakan sikap tegas terkait dugaan praktik “uang siluman” yang menyeret nama sejumlah anggota DPRD Provinsi Nusa Tenggara Barat (NTB). Isu yang menyeruak belakangan ini dinilai telah mencoreng martabat lembaga legislatif dan menurunkan kepercayaan publik.
 
 Ketua PKC PMII Bali Nusra Ahmad Muzakkir menegaskan bahwa pihaknya mendesak Aparat Penegak Hukum (APH), khususnya Kejaksaan Tinggi NTB untuk mengusut tuntas terkait adanya dugaan bagi-bagi fee dari alokasi program pokok-pokok pikiran (Pokir) kepada anggota dewan baru.
