@@ -3,7 +3,7 @@ layout: post
 title: "Bersiap Luncurkan KTA PMII Hibrida, PKC PMII Bali Nusra Berharap Bisa Jadi Kartu Multiakses"
 date: 2025-07-07 01:44:21 +0800
 author: "PKC PMII Bali Nusra"
-image: "https://raw.githubusercontent.com/websitepmiibalinusra/websitepmiibalinusra.github.io/main/assets/rilis/bersiap-luncurkan-kta-pmii-hibrida-pkc-pmii-bali-nusra-berharap-bisa-jadi-kartu-multiakses.png"
+image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/bersiap-luncurkan-kta-pmii-hibrida-pkc-pmii-bali-nusra-berharap-bisa-jadi-kartu-multiakses.png"
 image_caption: "Pembuatan KTA PMII Hibrida"
 ---
 
