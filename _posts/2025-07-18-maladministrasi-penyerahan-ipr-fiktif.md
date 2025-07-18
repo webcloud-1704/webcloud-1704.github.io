@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gubernur NTB Diduga Lakukan Maladministrasi Izin Tambang, PKC PMII Mengadukan ke Ombudsman"
+title: "Maladministrasi Penyerahan IPR Fiktif : PKC PMII Bali-Nusra Adukan Gubernur NTB ke Ombudsman"
 date: 2025-07-18 01:44:21 +0800
 author: "PKC PMII Bali Nusra"
 image: "https://raw.githubusercontent.com/webcloud-1704/webcloud-1704.github.io/main/assets/rilis/rilis12.png"
