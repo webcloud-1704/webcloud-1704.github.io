@@ -1,0 +1,30 @@
+# =============================================================================
+# DATA PENGURUS UTAMA (BPH)
+# =============================================================================
+# File ini berfungsi sebagai "database" untuk daftar pengurus.
+# Anda dapat dengan mudah menambah, mengubah, atau menghapus data di sini
+# tanpa perlu menyentuh file HTML.
+#
+# Cara mengakses data ini di HTML: {{ site.data.pengurus.pimpinan }}
+#
+# Struktur:
+# - nama: Nama lengkap pengurus.
+# - jabatan: Jabatan resmi.
+# - foto: Path menuju file foto di dalam folder /assets/pengurus/.
+# =============================================================================
+
+pimpinan:
+  - nama: "Ahmad Muzakkir"
+    jabatan: "Ketua PKC PMII"
+    foto: "zakir.png"
+
+  - nama: "Nurhalifah"
+    jabatan: "Ketua KOPRI PKC"
+    foto: "ifa.png"
+
+# Anda bisa menambahkan pengurus lain di sini dengan format yang sama.
+# Contoh:
+#  - nama: "Nama Pengurus Baru"
+#    jabatan: "Sekretaris Umum"
+#    foto: "nama-file-foto.png"
+
