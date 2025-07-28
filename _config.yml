@@ -1,0 +1,80 @@
+# =============================================================================
+# KONFIGURASI SITUS UTAMA
+# =============================================================================
+# Variabel di bawah ini adalah konfigurasi global untuk situs Anda.
+# Anda dapat mengaksesnya di mana saja menggunakan {{ site.variable }}.
+# Contoh: {{ site.title }} akan menampilkan "PKC PMII Bali Nusra".
+
+# --- Informasi Dasar & SEO ---
+# Informasi ini sangat penting untuk mesin pencari (Google, Bing) dan
+# untuk plugin `jekyll-seo-tag`.
+title: PKC PMII Bali Nusra
+email: pmiibalinusra.official@gmail.com
+description: >- # Tanda `>-` memastikan deskripsi menjadi satu baris dalam HTML.
+  Website Resmi Pengurus Koordinator Cabang (PKC) Pergerakan Mahasiswa Islam 
+  Indonesia (PMII) Bali-Nusa Tenggara. Mendorong inovasi dan pergerakan 
+  mahasiswa yang berlandaskan Ahlussunnah wal Jama'ah.
+url: "https://pmiibalinusra.or.id" # URL produksi situs Anda. JANGAN diakhiri dengan '/'.
+baseurl: "" # Kosongkan jika situs di root domain. Isi "/nama-repo" jika di sub-folder.
+logo: /assets/images/logo1.png # Logo default untuk social sharing (Open Graph).
+
+# --- Pengaturan Regional & Bahasa ---
+lang: id_ID # Kode bahasa, penting untuk aksesibilitas dan SEO.
+timezone: Asia/Makassar # Zona waktu untuk konsistensi tanggal postingan.
+
+# =============================================================================
+# DATA KUSTOM
+# =============================================================================
+# Anda dapat menambahkan data kustom di sini untuk digunakan di seluruh situs.
+# Ini membantu sentralisasi informasi agar mudah diubah.
+
+# --- Informasi Kontak & Media Sosial ---
+# Akses dengan: {{ site.author.name }} atau {{ site.social.youtube }}
+author:
+  name: PKC PMII Bali Nusra
+  
+social:
+  youtube: https://youtube.com/@pkcpmiibalinusra
+  facebook: https://facebook.com/pkcpmiibalinusatenggara
+  instagram: https://instagram.com/pkc.pmiibalinusra
+
+# =============================================================================
+# PENGATURAN BUILD JEKYLL
+# =============================================================================
+# Konfigurasi teknis yang mengontrol bagaimana Jekyll membangun situs Anda.
+
+# --- Plugin ---
+# Daftar plugin yang digunakan untuk menambah fungsionalitas.
+plugins:
+  - jekyll-feed    # Membuat file feed.xml untuk RSS reader.
+  - jekyll-seo-tag # Menghasilkan tag meta SEO secara otomatis.
+
+# --- Struktur Permalink ---
+# Mengatur format URL untuk postingan agar rapi dan SEO-friendly.
+# Contoh URL: /rilis/2025/07/28/judul-postingan-saya
+permalink: /rilis/:year/:month/:day/:title
+
+# --- Markdown Renderer ---
+# Menggunakan kramdown dengan beberapa opsi tambahan.
+markdown: kramdown
+kramdown:
+  input: GFM # Mengaktifkan GitHub Flavored Markdown (untuk tabel, dll).
+  syntax_highlighter: rouge # Menggunakan 'rouge' untuk syntax highlighting pada blok kode.
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# =============================================================================
+# PENGECUALIAN (EXCLUDE)
+# =============================================================================
+# Daftar file dan folder yang akan diabaikan oleh Jekyll saat proses build.
+# Ini menjaga folder `_site` (hasil build) tetap bersih.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+  - "*.txt" # Contoh: mengecualikan semua file .txt
