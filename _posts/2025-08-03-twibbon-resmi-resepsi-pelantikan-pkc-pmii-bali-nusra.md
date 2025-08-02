@@ -3,7 +3,7 @@ layout: post
 title: "Twibbon Resmi Resepsi Pelantikan PKC PMII Bali Nusra"
 description: " pmii, pkc pmii, pmii bali nusra, bali nusra, ntb, ntt"
 author: "PKC PMII Bali Nusra"
-image: "rilis14.png"
+image: "assets/rilis/rilis14.png"
 image_caption: "Twibbon Resepsi Pelantikan PKC PMII Bali Nusra"
 categories:
   - Resepsi
@@ -25,9 +25,10 @@ Ini adalah undangan terbuka bagi seluruh sahabat-sahabati, kader, alumni (IKA PM
 
 Satu klik Anda adalah satu suara dukungan. Satu unggahan Anda adalah energi baru bagi kepengurusan yang akan datang.
 
-Pasang Twibbon Anda sekarang melalui tautan resmi
-[Klik Twibbon Pelantikan PKC PMII Bali Nusra](https://twibbo.nz/pelantikan-pkc-pmii-bali-nusra)
+Pasang Twibbon Anda sekarang melalui tautan resmi : [Klik Twibbon Pelantikan PKC PMII Bali Nusra](https://twibbo.nz/pelantikan-pkc-pmii-bali-nusra)
 
 Mari kita birukan langit digital dan tunjukkan pada Indonesia bahwa semangat pergerakan dari Bali Nusra siap berkontribusi nyata untuk Nusantara!
 
-#PelantikanPKCPMIIBaliNusra #PMIIBaliNusra2025 #DariBaliNusraUntukNusantara #SatukanPergerakan #PMII #AktivisPMII #KeadilanSosial
+> #PelantikanPKCPMIIBaliNusra #PMIIBaliNusra2025
+> #DariBaliNusraUntukNusantara #SatukanPergerakan
+> #PMII #AktivisPMII #KeadilanSosial
