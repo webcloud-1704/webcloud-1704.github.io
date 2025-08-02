@@ -132,7 +132,7 @@
           <figure class="mb-8">
             <div class="overflow-hidden rounded-xl shadow-lg">
               <!-- Logika untuk menangani URL gambar eksternal dan path internal -->
-              <img src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ '/assets/rilis/' | append: page.image | relative_url }}{% endif %}" class="w-full h-auto object-cover" alt="{{ page.image_caption | default: page.title }}" loading="lazy">
+              <img src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ '/' | append: page.image | relative_url }}{% endif %}" class="w-full h-auto object-cover" alt="{{ page.image_caption | default: page.title }}" loading="lazy">
             </div>
             <!-- Keterangan gambar, hanya ditampilkan jika 'image_caption' ada -->
             {% if page.image_caption %}
