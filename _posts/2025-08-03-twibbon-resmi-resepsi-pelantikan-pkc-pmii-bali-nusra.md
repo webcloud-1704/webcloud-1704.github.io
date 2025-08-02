@@ -8,7 +8,7 @@ image_caption: "Twibbon Resepsi Pelantikan PKC PMII Bali Nusra"
 categories:
   - Resepsi
   - Pelantikan
-	- PMII
+  - PMII
 tags:
   - pmii
   - bali
