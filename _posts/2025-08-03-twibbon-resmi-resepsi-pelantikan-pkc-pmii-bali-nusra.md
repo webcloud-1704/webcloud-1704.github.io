@@ -3,7 +3,7 @@ layout: post
 title: "Twibbon Resmi Resepsi Pelantikan PKC PMII Bali Nusra"
 description: " pmii, pkc pmii, pmii bali nusra, bali nusra, ntb, ntt"
 author: "PKC PMII Bali Nusra"
-image: "assets/rilis/rilis14.png"
+image: "rilis14.png"
 image_caption: "Twibbon Resepsi Pelantikan PKC PMII Bali Nusra"
 categories:
   - Resepsi
