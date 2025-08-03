@@ -25,7 +25,7 @@ Ini adalah undangan terbuka bagi seluruh sahabat-sahabati, kader, alumni (IKA PM
 
 Satu klik Anda adalah satu suara dukungan. Satu unggahan Anda adalah energi baru bagi kepengurusan yang akan datang.
 
-Pasang Twibbon Anda sekarang melalui tautan resmi : [Klik Twibbon Pelantikan PKC PMII Bali Nusra](https://twibbo.nz/pelantikan-pkc-pmii-bali-nusra)
+Pasang Twibbon Anda sekarang melalui tautan resmi : [Klik Twibbon Pelantikan PKC PMII Bali Nusra](https://www.twibbonize.com/pkcpmiibalinusrapelantikan))
 
 Mari kita birukan langit digital dan tunjukkan pada Indonesia bahwa semangat pergerakan dari Bali Nusra siap berkontribusi nyata untuk Nusantara!
 
