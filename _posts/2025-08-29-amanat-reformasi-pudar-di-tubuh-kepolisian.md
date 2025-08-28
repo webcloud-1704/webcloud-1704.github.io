@@ -3,7 +3,7 @@ layout: post
 title: "Amanah Reformasi Pudar di Tubuh Kepolisian!"
 description: "Kapolri, Polisi, Polri, Aksi, Ojol"
 author: "Siber Media PKC"
-image: "assets/rilis/rilis17.png"
+image: "assets/rilis/rilis18.png"
 image_caption: "Lalu Renggi HS - Ketua Hukum, HAM dan Kebijakan Publik"
 categories:
   - Hukum
