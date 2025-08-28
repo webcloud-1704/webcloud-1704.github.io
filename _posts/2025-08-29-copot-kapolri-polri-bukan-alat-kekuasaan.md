@@ -3,7 +3,7 @@ layout: post
 title: "Copot KAPOLRI! POLRI Bukan Alat Kekuasaan"
 description: "Kapolri, Polisi, Polri, Aksi, Ojol"
 author: "Siber Media PKC"
-image: "rilis16.png"
+image: "assets/rilis16.png"
 image_caption: "Edi Irawan - Ketua PC PMII Kota Mataram"
 categories:
   - Hukum
