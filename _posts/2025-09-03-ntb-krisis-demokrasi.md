@@ -2,7 +2,7 @@
 layout: post
 title: "NTB Krisis Demokrasi"
 description: "Demokrasi, NTB, PMII, Premanisme, Aksi Mahasiswa, Pemprov NTB"
-author: "Siber Media PKC PMII NTB"
+author: "Siber Media PKC PMII Bali Nusa Tenggara"
 image: "assets/rilis/rilis18.png"
 image_caption: "Lalu Renggi HS - Ketua Biro Hukum, HAM dan Advokasi Kebijakan Publik"
 categories:
