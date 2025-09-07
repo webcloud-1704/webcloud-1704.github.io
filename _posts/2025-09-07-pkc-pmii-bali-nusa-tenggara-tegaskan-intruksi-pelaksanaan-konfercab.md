@@ -3,7 +3,7 @@ layout: post
 title: "PKC PMII Bali Nusa Tenggara, Tegaskan Instruksi Pelaksanaan Konfercab"
 description: "Berdasarkan hasil evaluasi PKC PMII Bali Nusa Tenggara, saat ini terdapat enam Cabang yang masa berlaku SK kepengurusannya telah habis"
 author: "PKC PMII Bali Nusa Tenggara"
-image: "assets/rilis/rilis19.png"
+image: "assets/rilis/rilis20.png"
 image_caption: "Suci Ramadhani Putri - Sekretaris PKC PMII Bali Nusa Tenggara"
 categories:
   - Sosial
