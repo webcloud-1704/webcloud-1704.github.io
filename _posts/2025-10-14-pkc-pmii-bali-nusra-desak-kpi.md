@@ -37,12 +37,3 @@ Sebagai wujud keseriusan dalam menyikapi persoalan ini, PKC PMII Bali Nusa Tengg
 Langkah ini menegaskan komitmen PMII untuk memastikan ruang publik, terutama media penyiaran, diisi dengan konten yang sehat dan tidak meresahkan.
 
 "Dengan ini kami mengingatkan bahwa media harus mengedepankan sikap edukatif, informatif, akurat, dan komprehensif. Sangat penting untuk tetap menyajikan tayangan yang mencerdaskan masyarakat, sehingga kredibilitas media sebagai pilar keempat demokrasi tetap terjaga," pungkas Fahrurrozi.
-Pada akhirnya, tujuan dari komunikasi yang sejati bukanlah untuk membuktikan siapa yang benar, melainkan untuk membangun jembatan pemahaman di atas jurang perbedaan kita. Ini dimulai dengan kesadaran bahwa lawan bicara kita mungkin datang dari "dunia" yang berbeda, dengan naskah yang berbeda pula. Alih-alih langsung menyimpulkan, kita bisa berhenti sejenak dan bertanya dengan tulus, *"Apa yang sebenarnya kamu butuhkan dariku saat ini? Apakah kamu butuh didengarkan, atau butuh solusi?"*
-
-Dalam pertanyaan sederhana itulah, kehangatan dan koneksi yang kita semua dambakan sering kali ditemukan. Kita belajar untuk tidak hanya mendengarkan kata-kata, tetapi juga menerjemahkan bahasa hati di baliknya, menciptakan sebuah tarian komunikasi yang lebih harmonis, lebih utuh, dan jauh lebih manusiawi.
-
-*Sumber*
-
-Tannen, D. (1990). *You just don't understand: Women and men in conversation*. William Morrow.
-
-Wood, J. T. (1994). *Gendered lives: Communication, gender, and culture*. Wadsworth Pub. Co.
