@@ -16,6 +16,7 @@ tags:
   - Komisi Penyiaran Indonesia
 ---
 
+
 **Mataram** - Pengurus Koordinator Cabang Pergerakan Mahasiswa Islam Indonesia (PKC PMII) Bali Nusa Tenggara dari Bidang Siber Media dan Pengelolaan Opini Pablik mengecam tayangan *"Expose Uncensored"* tayangan Trans7 bagian dari Grup Transmedia dibawah naungan CT Corp.
 
 Tayangan tersebut secara nilai telah mencedrai perasaan, mengandung freming negatif dan mengandung informasi tidak benar (HOAX) terhadap lembaga pendidikan islam khususnya pesantren.
