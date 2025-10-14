@@ -1,21 +1,28 @@
 ---
 layout: post
 title: "PKC PMII Bali Nusra Desak KPI Cabut Izin Tayang Trans7 dan Tindak Tegas Oknum yang Terlibat"
-description: "Pengurus Koordinator Cabang Pergerakan Mahasiswa Islam Indonesia (PKC PMII) Bali Nusa Tenggara dari Bidang Siber Media dan Pengelolaan Opini Pablik mengecam tayangan *"Expose Uncensored"* tayangan Trans7 bagian dari Grup Transmedia dibawah naungan CT Corp."
+description: "Pengurus Koordinator Cabang Pergerakan Mahasiswa Islam Indonesia (PKC PMII) Bali Nusa Tenggara dari Bidang Siber Media dan Pengelolaan Opini Pablik mengecam tayangan *"Expose Uncensored"* tayangan Trans7 bagian dari Grup Transmedia dibawah naungan CT Corp"
 author: "PKC PMII Bali Nusa Tenggara"
 image: "assets/rilis/rilis25.png"
 image_caption: "Fahrurrozi - Ketua Bidang Siber Media dan Pengelolaan Opini Publik"
 categories:
-  - Televisi
-  - Media
-  - Opini
-  - Publik
+  - Komunikasi
+  - Pendidikan
+  - Psikologi
+  - Akademik
+  - Gender
+  - Profesi
+  - Hubungan
 tags:
-  - Kementerian Komunikasi dan Digital
-  - Komisi Informasi
-  - Komisi Penyiaran Indonesia
+  - Deborah Tannen
+  - Genderlect
+  - Hubungan
+  - Maskulinitas
+  - Femininitas
+  - Kopra
+  - Kopri
+  - PMII
 ---
-
 
 **Mataram** - Pengurus Koordinator Cabang Pergerakan Mahasiswa Islam Indonesia (PKC PMII) Bali Nusa Tenggara dari Bidang Siber Media dan Pengelolaan Opini Pablik mengecam tayangan *"Expose Uncensored"* tayangan Trans7 bagian dari Grup Transmedia dibawah naungan CT Corp.
 
