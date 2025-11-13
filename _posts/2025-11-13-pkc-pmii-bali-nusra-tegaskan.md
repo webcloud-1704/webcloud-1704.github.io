@@ -16,7 +16,7 @@ tags:
   - Mataram
 ---
 
-Mataram — Pengurus Koordinator Cabang Pergerakan Mahasiswa Islam Indonesia (PKC PMII) Bali Nusra menindaklanjuti Instruksi Penyelenggaraan Pelaksanaan Konferensi yang dikeluarkan oleh Pengurus Besar PMII melalui surat nomor 487.PB-XXI.02.066.A-11.2025 tertanggal 10 November 2025.
+Mataram, 13 November 2025 — Pengurus Koordinator Cabang Pergerakan Mahasiswa Islam Indonesia (PKC PMII) Bali Nusra menindaklanjuti Instruksi Penyelenggaraan Pelaksanaan Konferensi yang dikeluarkan oleh Pengurus Besar PMII melalui surat nomor 487.PB-XXI.02.066.A-11.2025 tertanggal 10 November 2025.
 
 Dalam surat tersebut, PB PMII menegaskan bahwa:
 
@@ -26,9 +26,9 @@ Menindaklanjuti instruksi tersebut, PKC PMII Bali Nusra menghimbau dan menekanka
 
 Sekretaris PKC PMII Bali Nusra, Suci Ramadhani Putri, menyampaikan bahwa langkah ini merupakan bagian dari upaya memastikan konsolidasi organisasi di wilayah Bali Nusra berjalan efektif dan selaras dengan arahan PB PMII.
 
-> “Kami di PKC menekankan kepada para cabang tersebut agar mengindahkan surat PB PMII tersebut. Ini penting demi memperkuat konsolidasi organisasi.” tegas Suci.
+> “Kami di PKC menekankan kepada para cabang tersebut agar mengindahkan instruksi surat PB PMII. Ini penting demi memperkuat konsolidasi organisasi.” tegas Suci.
 
-PKC PMII Bali Nusra mencatat, hingga saat ini terdapat tiga cabang yang akan melaksanakan Konfercab, yakni: PC PMII Buleleng, PC PMII Denpasar dan PC PMII Dompu.
+PKC PMII Bali Nusra mencatat, hingga saat ini tersisa tiga cabang yang masa kepengurusannya telah berakhir dan akan melaksanakan Konfercab, yakni: PC PMII Buleleng, PC PMII Denpasar dan PC PMII  Dompu.
 
 PKC PMII Bali Nusra akan terus melakukan pendampingan dan pemantauan agar pelaksanaan Konfercab di tiga cabang tersebut dapat segera terlaksana sesuai ketentuan dan batas waktu yang telah ditetapkan PB PMII.
 
