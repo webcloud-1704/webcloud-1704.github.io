@@ -1,29 +1,17 @@
 ---
 # Front Matter untuk Jekyll.
-title: Kartu - PMII Bali dan Nusa Tenggara
-description: Bergabunglah dengan Pergerakan Mahasiswa Islam Indonesia (PMII) Bali-Nusa Tenggara dengan mengisi formulir pendaftaran untuk menjadi kader pergerakan.
+title: Daftar - PMII Youth Innovation Conference
+description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Interpretation, Digital Creation”.
 ---
 
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
-    <!-- 
-      ======================================================================
-      KONFIGURASI DASAR & METADATA SEO
-      ======================================================================
-      Menggunakan plugin 'jekyll-seo-tag' untuk menghasilkan tag SEO secara
-      otomatis berdasarkan Front Matter di atas.
-    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% seo %}
 
-    <!-- 
-      ======================================================================
-      ASET EKSTERNAL (IKON, FONT, LIBRARY)
-      ======================================================================
-      Memuat semua sumber daya eksternal yang dibutuhkan oleh halaman.
-    -->
+    <!-- ASET EKSTERNAL -->
     <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,12 +19,7 @@ description: Bergabunglah dengan Pergerakan Mahasiswa Islam Indonesia (PMII) Bal
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- 
-      ======================================================================
-      STYLE KUSTOM
-      ======================================================================
-      CSS kustom untuk form, pesan status, dan animasi.
-    -->
+    <!-- STYLE KUSTOM -->
     <style>
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #f9fafb; }
         .cta-gradient { background: linear-gradient(90deg, #0973D6, #2918A9); }
@@ -45,13 +28,14 @@ description: Bergabunglah dengan Pergerakan Mahasiswa Islam Indonesia (PMII) Bal
         @keyframes slideInFromBottom { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
         .animate-on-scroll { opacity: 0; }
         .animate-slide-in-bottom { animation: slideInFromBottom .6s ease-out forwards; }
-        /* Style untuk input form saat aktif (focus) */
-        .form-input:focus { border-color: #0973D6; box-shadow: 0 0 0 3px rgba(9, 115, 214, 0.2); outline: none; }
-        /* Style untuk kotak pesan status (error/sukses/info) */
+        .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: #0973D6; box-shadow: 0 0 0 3px rgba(9, 115, 214, 0.2); outline: none; }
         .message-box { font-size: 0.875rem; margin-top: 1rem; padding: 0.75rem 1rem; border-radius: 0.5rem; display: none; }
         .message-box.error { color: #991b1b; background-color: #fef2f2; border: 1px solid #fecaca; }
         .message-box.success { color: #14532d; background-color: #f0fdf4; border: 1px solid #bbf7d0; }
         .message-box.info { color: #1e40af; background-color: #eff6ff; border: 1px solid #bfdbfe; }
+        /* Custom Radio Style */
+        .radio-group label { cursor: pointer; }
+        .radio-group input[type="radio"] { accent-color: #0973D6; width: 1.2em; height: 1.2em; }
     </style>
 </head>
 <body class="text-gray-800">
@@ -71,7 +55,7 @@ description: Bergabunglah dengan Pergerakan Mahasiswa Islam Indonesia (PMII) Bal
                 <a href="{{ '/pengurus' | relative_url }}" class="text-white text-sm font-semibold hover:text-yellow-300 transition-colors">Pengurus</a>
                 <a href="{{ '/rilis' | relative_url }}" class="text-white text-sm font-semibold hover:text-yellow-300 transition-colors">Rilis</a>
             </nav>
-            <a href="{{ '/kartu' | relative_url }}" class="hidden md:block bg-[#FFCB05] text-black px-5 py-2.5 rounded-full font-bold text-sm shadow-md">Kartu</a>
+            <a href="{{ '/kartu' | relative_url }}" class="hidden md:block bg-[#FFCB05] text-black px-5 py-2.5 rounded-full font-bold text-sm shadow-md">Daftar</a>
             <button id="mobile-menu-button" class="md:hidden"><i data-lucide="menu" class="w-6 h-6 text-white"></i></button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden cta-gradient">
@@ -79,44 +63,237 @@ description: Bergabunglah dengan Pergerakan Mahasiswa Islam Indonesia (PMII) Bal
             <a href="{{ '/tentang' | relative_url }}" class="block text-center py-3 px-6 text-white text-base hover:bg-white/10 transition-colors">Tentang</a>
             <a href="{{ '/pengurus' | relative_url }}" class="block text-center py-3 px-6 text-white text-base hover:bg-white/10 transition-colors">Pengurus</a>
             <a href="{{ '/rilis' | relative_url }}" class="block text-center py-3 px-6 text-white text-base hover:bg-white/10 transition-colors">Rilis</a>
-            <div class="p-4"><a href="{{ '/kartu' | relative_url }}" class="block w-full text-center bg-[#FFCB05] text-black px-5 py-3 rounded-full font-bold text-base">Kartu</a></div>
+            <div class="p-4"><a href="{{ '/kartu' | relative_url }}" class="block w-full text-center bg-[#FFCB05] text-black px-5 py-3 rounded-full font-bold text-base">Daftar</a></div>
         </div>
     </header>
 
-    <!-- ===== KONTEN UTAMA HALAMAN KARTU ===== -->
+    <!-- ===== KONTEN UTAMA FORMULIR ===== -->
     <main class="pt-24 md:pt-28 pb-16 md:pb-24">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- SEKSI JUDUL HALAMAN -->
             <header class="text-center mb-12 md:mb-16 animate-on-scroll">
-                <h1 class="text-sm font-bold uppercase text-[#0973D6] tracking-wider mb-2">Keanggotaan</h1>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">Kartu Tanda Anggota</h2>
+                <h1 class="text-sm font-bold uppercase text-[#0973D6] tracking-wider mb-2">PMII Youth Innovation Conference</h1>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-2">FORMULIR PENDAFTARAN</h2>
+                <p class="text-lg text-gray-600 italic">“Data Interpretation, Digital Creation”</p>
             </header>
             
             <!-- FORMULIR PENDAFTARAN -->
-            <div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
-                <form id="registration-form" class="space-y-6" novalidate>
-                    <!-- Setiap field dibungkus div untuk animasi dan styling yang konsisten -->
-                    <div class="animate-on-scroll"><label for="nama-lengkap" class="block text-sm font-medium text-gray-700 mb-1.5">Nama Lengkap</label><input type="text" id="nama-lengkap" name="Nama Lengkap" placeholder="Sesuai KTP" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
-                    <div class="animate-on-scroll"><label for="nik" class="block text-sm font-medium text-gray-700 mb-1.5">Nomor Induk Kependudukan (NIK)</label><input type="text" id="nik" name="NIK" placeholder="Masukkan 16 digit NIK" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required pattern="\d{16}"></div>
-                    <div class="animate-on-scroll"><label for="ttl" class="block text-sm font-medium text-gray-700 mb-1.5">Tempat, Tanggal Lahir</label><input type="text" id="ttl" name="TTL" placeholder="Contoh: Mataram, 17 Agustus 2002" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
-                    <div class="animate-on-scroll"><label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email Aktif</label><input type="email" id="email" name="Email" placeholder="email.anda@gmail.com" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
-                    <div class="animate-on-scroll"><label for="telepon" class="block text-sm font-medium text-gray-700 mb-1.5">Nomor Telepon/WhatsApp</label><input type="tel" id="telepon" name="Telepon" placeholder="081234567890" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
-                    <div class="animate-on-scroll"><label for="rayon" class="block text-sm font-medium text-gray-700 mb-1.5">Rayon & Fakultas</label><input type="text" id="rayon" name="Rayon" placeholder="Contoh: Rayon Al-Jazari Fakultas Teknik" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
-                    <div class="animate-on-scroll"><label for="komisariat" class="block text-sm font-medium text-gray-700 mb-1.5">Komisariat & Kampus</label><input type="text" id="komisariat" name="Komisariat" placeholder="Contoh: Komisariat Universitas Mataram" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
-                    <div class="animate-on-scroll"><label for="cabang" class="block text-sm font-medium text-gray-700 mb-1.5">Cabang (Kabupaten/Kota)</label><input type="text" id="cabang" name="Cabang" placeholder="Contoh: Cabang Kota Mataram" class="form-input w-full text-base p-3 border border-gray-300 rounded-lg placeholder:text-sm placeholder:text-gray-400 transition" required></div>
+            <!-- Class bg-white, shadow, dan border dihapus agar menyatu dengan background (Permintaan sebelumnya) -->
+            <div class="max-w-3xl mx-auto">
+                <form id="registration-form" class="space-y-10" novalidate>
                     
-                    <!-- Input untuk upload file dengan UI yang lebih baik -->
-                    <div class="animate-on-scroll"><label class="block text-sm font-medium text-gray-700 mb-1.5">Sertifikat MAPABA (jpg/png)</label><label for="sertifikat-mapaba" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50"><i data-lucide="upload-cloud" class="w-5 h-5 text-gray-500"></i><span class="text-sm text-gray-500 file-name">Pilih file...</span></label><input type="file" id="sertifikat-mapaba" name="Sertifikat MAPABA" class="hidden" accept="image/jpeg, image/png" required></div>
-                    <div class="animate-on-scroll"><label class="block text-sm font-medium text-gray-700 mb-1.5">Foto E-KTP (jpg/png)</label><label for="e-ktp" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50"><i data-lucide="credit-card" class="w-5 h-5 text-gray-500"></i><span class="text-sm text-gray-500 file-name">Pilih file...</span></label><input type="file" id="e-ktp" name="Foto E-KTP" class="hidden" accept="image/jpeg, image/png" required></div>
-                    <div class="animate-on-scroll"><label class="block text-sm font-medium text-gray-700 mb-1.5">Pas Foto 4x6 Berjas PMII (jpg/png)</label><label for="foto" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50"><i data-lucide="image" class="w-5 h-5 text-gray-500"></i><span class="text-sm text-gray-500 file-name">Pilih file...</span></label><input type="file" id="foto" name="Foto" class="hidden" accept="image/jpeg, image/png" required></div>
+                    <!-- 1. DATA DIRI -->
+                    <section class="space-y-6">
+                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="user" class="w-5 h-5 text-[#0973D6]"></i> DATA DIRI</h3>
+                        
+                        <div class="animate-on-scroll">
+                            <label for="nama-lengkap" class="block text-sm font-medium text-gray-700 mb-1.5">Nama Lengkap</label>
+                            <input type="text" id="nama-lengkap" name="Nama Lengkap" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="Sesuai KTP" required>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class="animate-on-scroll">
+                                <label for="nik" class="block text-sm font-medium text-gray-700 mb-1.5">NIK</label>
+                                <input type="text" id="nik" name="NIK" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="16 Digit NIK" required pattern="\d{16}">
+                            </div>
+                            <div class="animate-on-scroll">
+                                <label for="ttl" class="block text-sm font-medium text-gray-700 mb-1.5">Tempat, Tanggal Lahir</label>
+                                <input type="text" id="ttl" name="TTL" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="Contoh: Mataram, 17 Agustus 2002" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class="animate-on-scroll">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Alamat Email</label>
+                                <input type="email" id="email" name="Email" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" required>
+                            </div>
+                            <div class="animate-on-scroll">
+                                <label for="whatsapp" class="block text-sm font-medium text-gray-700 mb-1.5">Nomor WhatsApp</label>
+                                <input type="tel" id="whatsapp" name="WhatsApp" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" required>
+                            </div>
+                        </div>
+                        <div class="animate-on-scroll">
+                            <label for="domisili" class="block text-sm font-medium text-gray-700 mb-1.5">Alamat Domisili</label>
+                            <textarea id="domisili" name="Domisili" rows="2" class="form-textarea w-full p-3 border border-gray-300 rounded-lg bg-white" required></textarea>
+                        </div>
+                    </section>
+
+                    <!-- 2. IDENTITAS PMII -->
+                    <section class="space-y-6">
+                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="flag" class="w-5 h-5 text-[#0973D6]"></i> IDENTITAS PMII</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class="animate-on-scroll">
+                                <label for="rayon" class="block text-sm font-medium text-gray-700 mb-1.5">Rayon & Fakultas</label>
+                                <input type="text" id="rayon" name="Rayon" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="Rayon Al-Jazari / Teknik" required>
+                            </div>
+                            <div class="animate-on-scroll">
+                                <label for="komisariat" class="block text-sm font-medium text-gray-700 mb-1.5">Komisariat & Kampus</label>
+                                <input type="text" id="komisariat" name="Komisariat" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="Komisariat UNRAM" required>
+                            </div>
+                        </div>
+
+                        <div class="animate-on-scroll">
+                            <label for="asal-cabang" class="block text-sm font-medium text-gray-700 mb-1.5">Asal Cabang</label>
+                            <select id="asal-cabang" name="Asal Cabang" class="form-select w-full p-3 border border-gray-300 rounded-lg bg-white" required>
+                                <option value="" disabled selected>-- Pilih Cabang --</option>
+                                <option value="PC PMII Denpasar">PC PMII Denpasar</option>
+                                <option value="PC PMII Buleleng">PC PMII Buleleng</option>
+                                <option value="PC PMII Kupang">PC PMII Kupang</option>
+                                <option value="PC PMII Alor">PC PMII Alor</option>
+                                <option value="PC PMII Mataram">PC PMII Mataram</option>
+                                <option value="PC PMII Lombok Timur">PC PMII Lombok Timur</option>
+                                <option value="PC PMII Lombok Tengah">PC PMII Lombok Tengah</option>
+                                <option value="PC PMII Lombok Barat">PC PMII Lombok Barat</option>
+                                <option value="PC PMII Lombok Utara">PC PMII Lombok Utara</option>
+                                <option value="PC PMII Sumbawa">PC PMII Sumbawa</option>
+                                <option value="PC PMII Bima">PC PMII Bima</option>
+                                <option value="PC PMII Dompu">PC PMII Dompu</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <!-- Kaderisasi (Radio) -->
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Kaderisasi Terakhir</label>
+                            <div class="space-y-2 radio-group">
+                                <label class="flex items-center space-x-3"><input type="radio" name="Kaderisasi" value="MAPABA" required> <span>MAPABA (Masa Penerimaan Anggota Baru)</span></label>
+                                <label class="flex items-center space-x-3"><input type="radio" name="Kaderisasi" value="PKD"> <span>PKD (Pelatihan Kader Dasar)</span></label>
+                                <label class="flex items-center space-x-3"><input type="radio" name="Kaderisasi" value="PKL"> <span>PKL (Pelatihan Kader Lanjut)</span></label>
+                                <label class="flex items-center space-x-3"><input type="radio" name="Kaderisasi" value="PKN"> <span>PKN (Pelatihan Kader Nasional)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Struktural (Radio) -->
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Struktural Terakhir/Saat Ini</label>
+                            <div class="flex flex-wrap gap-4 radio-group">
+                                <label class="flex items-center space-x-2"><input type="radio" name="Struktural" value="Rayon" required> <span>Rayon</span></label>
+                                <label class="flex items-center space-x-2"><input type="radio" name="Struktural" value="Komisariat"> <span>Komisariat</span></label>
+                                <label class="flex items-center space-x-2"><input type="radio" name="Struktural" value="Cabang"> <span>Cabang</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Jabatan (Radio) -->
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Jabatan Terakhir/Saat Ini</label>
+                            <div class="grid grid-cols-2 gap-3 radio-group">
+                                <label class="flex items-center space-x-2"><input type="radio" name="Jabatan" value="Ketua" required> <span>Ketua</span></label>
+                                <label class="flex items-center space-x-2"><input type="radio" name="Jabatan" value="Wakil Ketua"> <span>Wakil Ketua</span></label>
+                                <label class="flex items-center space-x-2"><input type="radio" name="Jabatan" value="Sekretaris"> <span>Sekretaris</span></label>
+                                <label class="flex items-center space-x-2"><input type="radio" name="Jabatan" value="Wakil Sekretaris"> <span>Wakil Sekretaris</span></label>
+                                <label class="flex items-center space-x-2"><input type="radio" name="Jabatan" value="Bendahara"> <span>Bendahara</span></label>
+                                <label class="flex items-center space-x-2"><input type="radio" name="Jabatan" value="Wakil Bendahara"> <span>Wakil Bendahara</span></label>
+                                <label class="flex items-center space-x-2"><input type="radio" name="Jabatan" value="KOPRI"> <span>KOPRI</span></label>
+                                <label class="flex items-center space-x-2"><input type="radio" name="Jabatan" value="Biro"> <span>Biro</span></label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 3. MOTIVASI PERGERAKAN -->
+                    <section class="space-y-6">
+                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="target" class="w-5 h-5 text-[#0973D6]"></i> MOTIVASI PERGERAKAN</h3>
+                        
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">1. Mengapa Sahabat/i merasa WAJIB mengikuti kegiatan ini? Apa urgensi literasi data dan kreasi digital bagi kader PMII saat ini?</label>
+                            <textarea name="Essay 1" rows="4" class="form-textarea w-full p-3 border border-gray-300 rounded-lg bg-white" required></textarea>
+                        </div>
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">2. Ceritakan satu contoh hoaks atau misinformasi (berbasis data palsu) yang meresahkan di wilayah Bali Nusra. Jika Sahabat/i memiliki skill yang diajarkan, konten seperti apa yang akan Sahabat/i buat untuk melawannya?</label>
+                            <textarea name="Essay 2" rows="4" class="form-textarea w-full p-3 border border-gray-300 rounded-lg bg-white" required></textarea>
+                        </div>
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">3. Apa rencana kontribusi nyata Sahabat/i untuk PKC PMII Bali Nusra setelah lulus dari program ini? (Bagaimana ilmu ini akan ditularkan ke kader lain?)</label>
+                            <textarea name="Essay 3" rows="4" class="form-textarea w-full p-3 border border-gray-300 rounded-lg bg-white" required></textarea>
+                        </div>
+                    </section>
+
+                    <!-- 4. PEMINATAN & PORTOFOLIO -->
+                    <section class="space-y-6">
+                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="briefcase" class="w-5 h-5 text-[#0973D6]"></i> PEMINATAN PORTOFOLIO</h3>
+                        
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Peminatan</label>
+                            <div class="space-y-2 radio-group">
+                                <label class="flex items-center space-x-3"><input type="radio" name="Peminatan" value="Cyber Data" required> <span>Cyber Data</span></label>
+                                <label class="flex items-center space-x-3"><input type="radio" name="Peminatan" value="Desain Komunikasi Visual"> <span>Desain Komunikasi Visual</span></label>
+                                <label class="flex items-center space-x-3"><input type="radio" name="Peminatan" value="Ilmu Perpustakaan dan Riset"> <span>Ilmu Perpustakaan dan Riset</span></label>
+                                <label class="flex items-center space-x-3"><input type="radio" name="Peminatan" value="Teknologi Informasi"> <span>Teknologi Informasi</span></label>
+                            </div>
+                        </div>
+
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">Upload Portofolio (DOC/PDF/JPG/PNG)</label>
+                            <label for="portofolio" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                                <i data-lucide="folder-up" class="w-5 h-5 text-gray-500"></i>
+                                <span class="text-sm text-gray-500 file-name">Pilih file portofolio...</span>
+                            </label>
+                            <input type="file" id="portofolio" name="Portofolio" class="hidden" accept=".doc,.docx,.pdf,.jpg,.jpeg,.png" required>
+                        </div>
+                    </section>
+
+                    <!-- 5. BERKAS ADMINISTRASI -->
+                    <section class="space-y-6">
+                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="files" class="w-5 h-5 text-[#0973D6]"></i> BERKAS ADMINISTRASI</h3>
+
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">Foto E-KTP</label>
+                            <label for="e-ktp" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                                <i data-lucide="credit-card" class="w-5 h-5 text-gray-500"></i>
+                                <span class="text-sm text-gray-500 file-name">Pilih file KTP...</span>
+                            </label>
+                            <input type="file" id="e-ktp" name="Foto E-KTP" class="hidden" accept=".doc,.docx,.pdf,.jpg,.jpeg,.png" required>
+                        </div>
+
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">Pas Foto Formal</label>
+                            <label for="pas-foto" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                                <i data-lucide="image" class="w-5 h-5 text-gray-500"></i>
+                                <span class="text-sm text-gray-500 file-name">Pilih foto...</span>
+                            </label>
+                            <input type="file" id="pas-foto" name="Pas Foto" class="hidden" accept=".doc,.docx,.pdf,.jpg,.jpeg,.png" required>
+                        </div>
+
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">Sertifikat MAPABA</label>
+                            <label for="sertifikat-mapaba" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                                <i data-lucide="file-check" class="w-5 h-5 text-gray-500"></i>
+                                <span class="text-sm text-gray-500 file-name">Pilih sertifikat...</span>
+                            </label>
+                            <input type="file" id="sertifikat-mapaba" name="Sertifikat MAPABA" class="hidden" accept=".doc,.docx,.pdf,.jpg,.jpeg,.png" required>
+                        </div>
+
+                        <div class="animate-on-scroll">
+                            <label class="block text-sm font-medium text-gray-700 mb-1.5">Surat Rekomendasi</label>
+                            <label for="surat-rekomendasi" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                                <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                <span class="text-sm text-gray-500 file-name">Pilih surat...</span>
+                            </label>
+                            <input type="file" id="surat-rekomendasi" name="Surat Rekomendasi" class="hidden" accept=".doc,.docx,.pdf,.jpg,.jpeg,.png" required>
+                        </div>
+                    </section>
+
+                    <!-- 6. KOMITMEN & SUBMIT -->
+                    <section class="bg-blue-50 p-5 rounded-lg space-y-4 animate-on-scroll">
+                        <label class="block text-base font-semibold text-gray-800">Apakah Sahabat/i siap dan bersedia berkomitmen 100% untuk mengikuti seluruh rangkaian program hingga tuntas?</label>
+                        <div class="space-y-2 radio-group">
+                            <label class="flex items-center space-x-3 p-2 bg-white rounded border border-gray-200 hover:border-blue-400">
+                                <input type="radio" name="Komitmen" value="Ya" required> 
+                                <span class="text-sm font-medium">Ya, saya siap. Saya adalah kader yang komitmen dan bertanggung jawab.</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-2 bg-white rounded border border-gray-200 hover:border-red-400">
+                                <input type="radio" name="Komitmen" value="Tidak"> 
+                                <span class="text-sm font-medium text-gray-600">Tidak / Ragu-ragu.</span>
+                            </label>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">Dengan menekan tombol "Kirim", saya menyatakan bahwa seluruh data yang saya isi adalah benar dan saya siap mengikuti proses seleksi selanjutnya.</p>
+                    </section>
                     
-                    <!-- Elemen untuk menampilkan pesan status (error/sukses/info) -->
                     <div id="status-message" class="message-box"></div>
 
-                    <!-- Tombol Kirim Form -->
                     <div class="pt-4 animate-on-scroll">
-                        <button type="button" id="submit-button" class="w-full bg-[#0973D6] text-white font-bold text-base p-3.5 rounded-lg flex items-center justify-center gap-3 transition-all duration-300 hover:bg-[#FFCB05] hover:text-black hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:scale-100">
+                        <button type="button" id="submit-button" class="w-full bg-[#0973D6] text-white font-bold text-lg p-4 rounded-lg flex items-center justify-center gap-3 transition-all duration-300 hover:bg-[#FFCB05] hover:text-black hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:scale-100">
                             <span id="button-text">Kirim Pendaftaran</span>
                             <div id="button-spinner" class="spinner w-6 h-6 border-4 hidden" style="border-color: rgba(255,255,255,0.3); border-top-color: #ffffff;"></div>
                         </button>
@@ -146,52 +323,29 @@ description: Bergabunglah dengan Pergerakan Mahasiswa Islam Indonesia (PMII) Bal
         </div>
     </footer>
 
-    <!-- 
-      ======================================================================
-      JAVASCRIPT UTAMA
-      ======================================================================
-      Logika untuk validasi formulir, konversi file, dan pengiriman data
-      ke Google Apps Script.
-    -->
+    <!-- JAVASCRIPT UTAMA -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         
-        // --- KONFIGURASI & VARIABEL GLOBAL ---
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby2N0stIy98Jpdo0yyVXKPIXWC2IlqfjL5yNKMmjNgkaFuZ91eH_SaOhYDutsc2jIM/exec';
-
-        // --- SELEKSI ELEMEN DOM ---
         const form = document.getElementById('registration-form');
         const submitButton = document.getElementById('submit-button');
         const statusMessage = document.getElementById('status-message');
         const buttonText = document.getElementById('button-text');
         const buttonSpinner = document.getElementById('button-spinner');
         
-        // --- FUNGSI PEMBANTU UI (User Interface) ---
-
-        /**
-         * Menampilkan pesan status kepada pengguna.
-         * @param {string} message - Pesan yang akan ditampilkan.
-         * @param {'info'|'success'|'error'} type - Tipe pesan (info, success, error).
-         */
         const showMessage = (message, type = 'info') => {
             statusMessage.textContent = message;
             statusMessage.className = `message-box ${type}`;
             statusMessage.style.display = 'block';
         };
 
-        /**
-         * Mengatur status loading pada tombol kirim.
-         * @param {boolean} isLoading - True jika loading, false jika tidak.
-         */
         const setButtonLoading = (isLoading) => {
             buttonText.classList.toggle('hidden', isLoading);
             buttonSpinner.classList.toggle('hidden', !isLoading);
             submitButton.disabled = isLoading;
         };
 
-        /**
-         * Mengatur tampilan nama file yang dipilih pada input file.
-         */
         function setupFileInputs() {
             form.querySelectorAll('input[type="file"]').forEach(input => {
                 input.addEventListener("change", function() {
@@ -202,89 +356,100 @@ description: Bergabunglah dengan Pergerakan Mahasiswa Islam Indonesia (PMII) Bal
             });
         }
 
-        // --- FUNGSI LOGIKA INTI ---
-
-        /**
-         * Memvalidasi semua field yang wajib diisi dalam formulir.
-         * @returns {boolean} - True jika semua field valid, false jika tidak.
-         */
         const validateForm = () => {
             let isValid = true;
             let firstInvalidField = null;
 
+            // Validasi text/select/textarea
             form.querySelectorAll('[required]').forEach(field => {
-                field.classList.remove('border-red-500'); // Hapus border error sebelumnya
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.classList.add('border-red-500');
-                    if (!firstInvalidField) firstInvalidField = field;
+                // Khusus radio button, cek apakah salah satu dalam group terpilih
+                if(field.type === 'radio') {
+                    const name = field.name;
+                    const group = form.querySelectorAll(`input[name="${name}"]`);
+                    const isChecked = Array.from(group).some(radio => radio.checked);
+                    const container = field.closest('.radio-group'); // Parent visual untuk radio
+                    
+                    if (!isChecked) {
+                        isValid = false;
+                        if(container) container.style.border = '1px solid #ef4444';
+                        if (!firstInvalidField) firstInvalidField = container || field;
+                    } else {
+                        if(container) container.style.border = 'none';
+                    }
+                } 
+                else {
+                    field.classList.remove('border-red-500'); 
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.classList.add('border-red-500');
+                        if (!firstInvalidField) firstInvalidField = field;
+                    }
                 }
             });
 
             if (firstInvalidField) {
-                firstInvalidField.closest('div').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
             return isValid;
         };
         
-        /**
-         * Membaca file sebagai Data URL (Base64) menggunakan Promise.
-         * @param {File} file - Objek file yang akan dibaca.
-         * @returns {Promise<string>} - Promise yang akan resolve dengan data URL Base64.
-         */
         const readFileAsDataURL = (file) => new Promise((resolve, reject) => {
-            if (!file) return reject(new Error("File tidak ditemukan. Pastikan semua file telah dipilih."));
+            if (!file) return reject(new Error("File tidak ditemukan."));
             const reader = new FileReader();
             reader.onload = () => resolve(reader.result);
             reader.onerror = () => reject(new Error(`Gagal membaca file: ${file.name}`));
             reader.readAsDataURL(file);
         });
 
-        // --- HANDLER UTAMA UNTUK PENGIRIMAN FORM ---
-
-        /**
-         * Fungsi asinkron yang menangani seluruh proses pengiriman formulir.
-         */
         async function handleFormSubmit() {
-            // 1. Validasi Form
             statusMessage.style.display = 'none';
             if (!validateForm()) {
-                showMessage("Harap isi semua kolom yang wajib diisi.", 'error');
+                showMessage("Harap isi semua kolom yang wajib diisi, termasuk pilihan radio button.", 'error');
                 return;
             }
 
-            // 2. Masuk ke Mode Loading
             setButtonLoading(true);
 
             try {
-                // 3. Kumpulkan Data Teks
                 showMessage("Mengumpulkan data formulir...", 'info');
                 const formDataObject = {};
-                new FormData(form).forEach((value, key) => {
-                    if (typeof value === 'string') formDataObject[key] = value;
-                });
+                
+                // Mengambil data text, textarea, select, dan radio
+                const inputs = new FormData(form);
+                for (const [key, value] of inputs.entries()) {
+                   formDataObject[key] = value;
+                }
 
-                // 4. Konversi File ke Base64 secara Paralel
-                showMessage("Mengonversi file gambar...", 'info');
-                const fotoFile = document.getElementById('foto').files[0];
-                const sertifikatFile = document.getElementById('sertifikat-mapaba').files[0];
-                const eKtpFile = document.getElementById('e-ktp').files[0];
+                // Konversi File Baru (Total 5 file: Portofolio, E-KTP, Pas Foto, Sertifikat MAPABA, Rekomendasi)
+                showMessage("Mengunggah berkas...", 'info');
+                
+                const portofolioFile = document.getElementById('portofolio').files[0];
+                const eKtpFile = document.getElementById('e-ktp').files[0]; 
+                const pasFotoFile = document.getElementById('pas-foto').files[0];
+                const sertifikatMapabaFile = document.getElementById('sertifikat-mapaba').files[0]; 
+                const rekomendasiFile = document.getElementById('surat-rekomendasi').files[0];
 
-                const [fotoBase64, sertifikatBase64, eKtpBase64] = await Promise.all([
-                    readFileAsDataURL(fotoFile),
-                    readFileAsDataURL(sertifikatFile),
-                    readFileAsDataURL(eKtpFile)
+                // Baca file secara paralel
+                const [portofolioB64, eKtpB64, pasFotoB64, sertifikatB64, rekomendasiB64] = await Promise.all([
+                    readFileAsDataURL(portofolioFile),
+                    readFileAsDataURL(eKtpFile),
+                    readFileAsDataURL(pasFotoFile),
+                    readFileAsDataURL(sertifikatMapabaFile),
+                    readFileAsDataURL(rekomendasiFile)
                 ]);
                 
-                // 5. Siapkan Payload (Data Lengkap) untuk Dikirim
                 const payload = {
                     formData: formDataObject,
-                    fotoFile: { name: fotoFile.name, type: fotoFile.type, data: fotoBase64.split(',')[1] },
-                    sertifikatFile: { name: sertifikatFile.name, type: sertifikatFile.type, data: sertifikatBase64.split(',')[1] },
-                    eKtpFile: { name: eKtpFile.name, type: eKtpFile.type, data: eKtpBase64.split(',')[1] }
+                    // Struktur file disesuaikan
+                    files: {
+                        portofolio: { name: portofolioFile.name, type: portofolioFile.type, data: portofolioB64.split(',')[1] },
+                        eKtp: { name: eKtpFile.name, type: eKtpFile.type, data: eKtpB64.split(',')[1] },
+                        pasFoto: { name: pasFotoFile.name, type: pasFotoFile.type, data: pasFotoB64.split(',')[1] },
+                        sertifikatMapaba: { name: sertifikatMapabaFile.name, type: sertifikatMapabaFile.type, data: sertifikatB64.split(',')[1] },
+                        rekomendasi: { name: rekomendasiFile.name, type: rekomendasiFile.type, data: rekomendasiB64.split(',')[1] }
+                    }
                 };
 
-                // 6. Kirim Data ke Google Apps Script
                 showMessage("Mengirim data ke server...", 'info');
                 const response = await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
@@ -293,33 +458,28 @@ description: Bergabunglah dengan Pergerakan Mahasiswa Islam Indonesia (PMII) Bal
                     redirect: 'follow'
                 });
                 
-                if (!response.ok) throw new Error(`Server merespons dengan error (status: ${response.status}).`);
-
+                if (!response.ok) throw new Error(`Server Error: ${response.status}`);
                 const result = await response.json();
-                if (result.status !== 'success') throw new Error(result.message || "Terjadi kesalahan dari server.");
+                if (result.status !== 'success') throw new Error(result.message || "Gagal menyimpan data.");
                 
-                // 7. Proses Sukses
-                showMessage(result.message, 'success');
+                showMessage("Pendaftaran Berhasil! Terima kasih.", 'success');
                 form.reset();
                 form.querySelectorAll('.file-name').forEach(span => span.textContent = 'Pilih file...');
 
             } catch (error) {
-                // 8. Tangani Error
-                console.error("Detail Kesalahan:", error);
+                console.error(error);
                 showMessage(`Terjadi kesalahan: ${error.message}`, 'error');
             } finally {
-                // 9. Keluar dari Mode Loading (selalu dijalankan)
                 setButtonLoading(false);
             }
         }
 
-        // --- INISIALISASI ---
         if (submitButton) {
             submitButton.addEventListener('click', handleFormSubmit);
         }
         setupFileInputs();
 
-        // --- UI & Animasi Tambahan (Preloader, Menu, Copyright, Scroll) ---
+        // Animasi & UI Lainnya
         const preloader = document.getElementById('preloader');
         if (preloader) { setTimeout(() => { preloader.style.transition = "opacity .5s ease"; preloader.style.opacity = "0"; preloader.addEventListener("transitionend", () => preloader.style.display = "none"); }, 500); }
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -327,7 +487,20 @@ description: Bergabunglah dengan Pergerakan Mahasiswa Islam Indonesia (PMII) Bal
         if (mobileMenuButton) { mobileMenuButton.addEventListener("click", () => mobileMenu.classList.toggle("hidden")); }
         const yearSpan = document.getElementById('year');
         if(yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
-        function setupScrollAnimations() { const animatedElements = document.querySelectorAll(".animate-on-scroll"); const observer = new IntersectionObserver(entries => { entries.forEach((entry, index) => { if (entry.isIntersecting) { entry.target.style.animationDelay = `${index * 100}ms`; entry.target.classList.add("animate-slide-in-bottom"); observer.unobserve(entry.target); } }); }, { threshold: 0.1 }); animatedElements.forEach(el => observer.observe(el)); }
+        
+        function setupScrollAnimations() { 
+            const animatedElements = document.querySelectorAll(".animate-on-scroll"); 
+            const observer = new IntersectionObserver(entries => { 
+                entries.forEach((entry, index) => { 
+                    if (entry.isIntersecting) { 
+                        entry.target.style.animationDelay = `${index * 50}ms`; 
+                        entry.target.classList.add("animate-slide-in-bottom"); 
+                        observer.unobserve(entry.target); 
+                    } 
+                }); 
+            }, { threshold: 0.1 }); 
+            animatedElements.forEach(el => observer.observe(el)); 
+        }
         
         lucide.createIcons();
         setupScrollAnimations();
