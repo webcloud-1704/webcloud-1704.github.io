@@ -21,31 +21,40 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
 
     <!-- STYLE KUSTOM -->
     <style>
-        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #f9fafb; }
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; }
         .cta-gradient { background: linear-gradient(90deg, #0973D6, #2918A9); }
+        
+        /* Animasi Loading Spinner */
         .spinner { width: 56px; height: 56px; border: 8px solid rgba(255, 255, 255, .3); border-top-color: #FFCB05; border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
+        
+        /* Animasi Masuk */
         @keyframes slideInFromBottom { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
         .animate-on-scroll { opacity: 0; }
         .animate-slide-in-bottom { animation: slideInFromBottom .6s ease-out forwards; }
+        
+        /* Form Styling */
         .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: #0973D6; box-shadow: 0 0 0 3px rgba(9, 115, 214, 0.2); outline: none; }
+        
+        /* Pesan Status */
         .message-box { font-size: 0.875rem; margin-top: 1rem; padding: 0.75rem 1rem; border-radius: 0.5rem; display: none; }
         .message-box.error { color: #991b1b; background-color: #fef2f2; border: 1px solid #fecaca; }
         .message-box.success { color: #14532d; background-color: #f0fdf4; border: 1px solid #bbf7d0; }
         .message-box.info { color: #1e40af; background-color: #eff6ff; border: 1px solid #bfdbfe; }
-        /* Custom Radio Style */
+        
+        /* Radio Button */
         .radio-group label { cursor: pointer; }
         .radio-group input[type="radio"] { accent-color: #0973D6; width: 1.2em; height: 1.2em; }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- ===== PRELOADER ===== -->
+    <!-- PRELOADER -->
     <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center cta-gradient">
         <div class="spinner"></div>
     </div>
 
-    <!-- ===== HEADER & NAVIGASI ===== -->
+    <!-- HEADER -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 cta-gradient shadow-xl">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
             <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/logo1.png' | relative_url }}" alt="Logo PKC PMII Bali Nusra" class="h-10 md:h-12"></a>
@@ -58,6 +67,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
             <a href="{{ '/kartu' | relative_url }}" class="hidden md:block bg-[#FFCB05] text-black px-5 py-2.5 rounded-full font-bold text-sm shadow-md">Daftar</a>
             <button id="mobile-menu-button" class="md:hidden"><i data-lucide="menu" class="w-6 h-6 text-white"></i></button>
         </div>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden cta-gradient">
             <a href="{{ '/' | relative_url }}" class="block text-center py-3 px-6 text-white text-base hover:bg-white/10 transition-colors">Beranda</a>
             <a href="{{ '/tentang' | relative_url }}" class="block text-center py-3 px-6 text-white text-base hover:bg-white/10 transition-colors">Tentang</a>
@@ -67,70 +77,69 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
         </div>
     </header>
 
-    <!-- ===== KONTEN UTAMA FORMULIR ===== -->
+    <!-- KONTEN UTAMA -->
     <main class="pt-24 md:pt-28 pb-16 md:pb-24">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- SEKSI JUDUL HALAMAN -->
+            <!-- Judul -->
             <header class="text-center mb-12 md:mb-16 animate-on-scroll">
                 <h1 class="text-sm font-bold uppercase text-[#0973D6] tracking-wider mb-2">PMII Youth Innovation Conference</h1>
                 <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-2">FORMULIR PENDAFTARAN</h2>
                 <p class="text-lg text-gray-600 italic">“Data Interpretation, Digital Creation”</p>
             </header>
             
-            <!-- FORMULIR PENDAFTARAN -->
-            <!-- Class bg-white, shadow, dan border dihapus agar menyatu dengan background (Permintaan sebelumnya) -->
-            <div class="max-w-3xl mx-auto">
-                <form id="registration-form" class="space-y-10" novalidate>
+            <!-- FORMULIR (Tampilan Klasik Kotak Putih) -->
+            <div class="max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-lg border-t-4 border-[#0973D6]">
+                <form id="registration-form" class="space-y-8" novalidate>
                     
                     <!-- 1. DATA DIRI -->
-                    <section class="space-y-6">
-                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="user" class="w-5 h-5 text-[#0973D6]"></i> DATA DIRI</h3>
+                    <section class="space-y-5">
+                        <h3 class="text-xl font-bold text-gray-800 border-b pb-2 flex items-center gap-2"><i data-lucide="user" class="w-5 h-5 text-[#0973D6]"></i> DATA DIRI</h3>
                         
                         <div class="animate-on-scroll">
                             <label for="nama-lengkap" class="block text-sm font-medium text-gray-700 mb-1.5">Nama Lengkap</label>
-                            <input type="text" id="nama-lengkap" name="Nama Lengkap" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="Sesuai KTP" required>
+                            <input type="text" id="nama-lengkap" name="Nama Lengkap" class="form-input w-full p-3 border border-gray-300 rounded-lg" placeholder="Sesuai KTP" required>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div class="animate-on-scroll">
                                 <label for="nik" class="block text-sm font-medium text-gray-700 mb-1.5">NIK</label>
-                                <input type="text" id="nik" name="NIK" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="16 Digit NIK" required pattern="\d{16}">
+                                <input type="text" id="nik" name="NIK" class="form-input w-full p-3 border border-gray-300 rounded-lg" placeholder="16 Digit NIK" required pattern="\d{16}">
                             </div>
                             <div class="animate-on-scroll">
                                 <label for="ttl" class="block text-sm font-medium text-gray-700 mb-1.5">Tempat, Tanggal Lahir</label>
-                                <input type="text" id="ttl" name="TTL" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="Contoh: Mataram, 17 Agustus 2002" required>
+                                <input type="text" id="ttl" name="TTL" class="form-input w-full p-3 border border-gray-300 rounded-lg" placeholder="Contoh: Mataram, 17 Agustus 2002" required>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div class="animate-on-scroll">
                                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Alamat Email</label>
-                                <input type="email" id="email" name="Email" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" required>
+                                <input type="email" id="email" name="Email" class="form-input w-full p-3 border border-gray-300 rounded-lg" required>
                             </div>
                             <div class="animate-on-scroll">
                                 <label for="whatsapp" class="block text-sm font-medium text-gray-700 mb-1.5">Nomor WhatsApp</label>
-                                <input type="tel" id="whatsapp" name="WhatsApp" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" required>
+                                <input type="tel" id="whatsapp" name="WhatsApp" class="form-input w-full p-3 border border-gray-300 rounded-lg" required>
                             </div>
                         </div>
                         <div class="animate-on-scroll">
                             <label for="domisili" class="block text-sm font-medium text-gray-700 mb-1.5">Alamat Domisili</label>
-                            <textarea id="domisili" name="Domisili" rows="2" class="form-textarea w-full p-3 border border-gray-300 rounded-lg bg-white" required></textarea>
+                            <textarea id="domisili" name="Domisili" rows="2" class="form-textarea w-full p-3 border border-gray-300 rounded-lg" required></textarea>
                         </div>
                     </section>
 
                     <!-- 2. IDENTITAS PMII -->
-                    <section class="space-y-6">
-                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="flag" class="w-5 h-5 text-[#0973D6]"></i> IDENTITAS PMII</h3>
+                    <section class="space-y-5">
+                        <h3 class="text-xl font-bold text-gray-800 border-b pb-2 flex items-center gap-2"><i data-lucide="flag" class="w-5 h-5 text-[#0973D6]"></i> IDENTITAS PMII</h3>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div class="animate-on-scroll">
                                 <label for="rayon" class="block text-sm font-medium text-gray-700 mb-1.5">Rayon & Fakultas</label>
-                                <input type="text" id="rayon" name="Rayon" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="Rayon Al-Jazari / Teknik" required>
+                                <input type="text" id="rayon" name="Rayon" class="form-input w-full p-3 border border-gray-300 rounded-lg" placeholder="Rayon Al-Jazari / Teknik" required>
                             </div>
                             <div class="animate-on-scroll">
                                 <label for="komisariat" class="block text-sm font-medium text-gray-700 mb-1.5">Komisariat & Kampus</label>
-                                <input type="text" id="komisariat" name="Komisariat" class="form-input w-full p-3 border border-gray-300 rounded-lg bg-white" placeholder="Komisariat UNRAM" required>
+                                <input type="text" id="komisariat" name="Komisariat" class="form-input w-full p-3 border border-gray-300 rounded-lg" placeholder="Komisariat UNRAM" required>
                             </div>
                         </div>
 
@@ -154,7 +163,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
                             </select>
                         </div>
 
-                        <!-- Kaderisasi (Radio) -->
+                        <!-- Kaderisasi -->
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-2">Kaderisasi Terakhir</label>
                             <div class="space-y-2 radio-group">
@@ -165,7 +174,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
                             </div>
                         </div>
 
-                        <!-- Struktural (Radio) -->
+                        <!-- Struktural -->
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-2">Struktural Terakhir/Saat Ini</label>
                             <div class="flex flex-wrap gap-4 radio-group">
@@ -175,7 +184,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
                             </div>
                         </div>
 
-                        <!-- Jabatan (Radio) -->
+                        <!-- Jabatan -->
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-2">Jabatan Terakhir/Saat Ini</label>
                             <div class="grid grid-cols-2 gap-3 radio-group">
@@ -192,26 +201,26 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
                     </section>
 
                     <!-- 3. MOTIVASI PERGERAKAN -->
-                    <section class="space-y-6">
-                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="target" class="w-5 h-5 text-[#0973D6]"></i> MOTIVASI PERGERAKAN</h3>
+                    <section class="space-y-5">
+                        <h3 class="text-xl font-bold text-gray-800 border-b pb-2 flex items-center gap-2"><i data-lucide="target" class="w-5 h-5 text-[#0973D6]"></i> MOTIVASI PERGERAKAN</h3>
                         
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-1.5">1. Mengapa Sahabat/i merasa WAJIB mengikuti kegiatan ini? Apa urgensi literasi data dan kreasi digital bagi kader PMII saat ini?</label>
-                            <textarea name="Essay 1" rows="4" class="form-textarea w-full p-3 border border-gray-300 rounded-lg bg-white" required></textarea>
+                            <textarea name="Essay 1" rows="4" class="form-textarea w-full p-3 border border-gray-300 rounded-lg" required></textarea>
                         </div>
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-1.5">2. Ceritakan satu contoh hoaks atau misinformasi (berbasis data palsu) yang meresahkan di wilayah Bali Nusra. Jika Sahabat/i memiliki skill yang diajarkan, konten seperti apa yang akan Sahabat/i buat untuk melawannya?</label>
-                            <textarea name="Essay 2" rows="4" class="form-textarea w-full p-3 border border-gray-300 rounded-lg bg-white" required></textarea>
+                            <textarea name="Essay 2" rows="4" class="form-textarea w-full p-3 border border-gray-300 rounded-lg" required></textarea>
                         </div>
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-1.5">3. Apa rencana kontribusi nyata Sahabat/i untuk PKC PMII Bali Nusra setelah lulus dari program ini? (Bagaimana ilmu ini akan ditularkan ke kader lain?)</label>
-                            <textarea name="Essay 3" rows="4" class="form-textarea w-full p-3 border border-gray-300 rounded-lg bg-white" required></textarea>
+                            <textarea name="Essay 3" rows="4" class="form-textarea w-full p-3 border border-gray-300 rounded-lg" required></textarea>
                         </div>
                     </section>
 
                     <!-- 4. PEMINATAN & PORTOFOLIO -->
-                    <section class="space-y-6">
-                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="briefcase" class="w-5 h-5 text-[#0973D6]"></i> PEMINATAN PORTOFOLIO</h3>
+                    <section class="space-y-5">
+                        <h3 class="text-xl font-bold text-gray-800 border-b pb-2 flex items-center gap-2"><i data-lucide="briefcase" class="w-5 h-5 text-[#0973D6]"></i> PEMINATAN PORTOFOLIO</h3>
                         
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-2">Peminatan</label>
@@ -225,7 +234,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
 
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-1.5">Upload Portofolio (DOC/PDF/JPG/PNG)</label>
-                            <label for="portofolio" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                            <label for="portofolio" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50">
                                 <i data-lucide="folder-up" class="w-5 h-5 text-gray-500"></i>
                                 <span class="text-sm text-gray-500 file-name">Pilih file portofolio...</span>
                             </label>
@@ -233,13 +242,13 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
                         </div>
                     </section>
 
-                    <!-- 5. BERKAS ADMINISTRASI -->
-                    <section class="space-y-6">
-                        <h3 class="text-xl font-bold text-gray-800 border-b-2 border-[#0973D6] pb-2 flex items-center gap-2"><i data-lucide="files" class="w-5 h-5 text-[#0973D6]"></i> BERKAS ADMINISTRASI</h3>
+                    <!-- 5. BERKAS ADMINISTRASI (Upload 4 File Tambahan) -->
+                    <section class="space-y-5">
+                        <h3 class="text-xl font-bold text-gray-800 border-b pb-2 flex items-center gap-2"><i data-lucide="files" class="w-5 h-5 text-[#0973D6]"></i> BERKAS ADMINISTRASI</h3>
 
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-1.5">Foto E-KTP</label>
-                            <label for="e-ktp" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                            <label for="e-ktp" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50">
                                 <i data-lucide="credit-card" class="w-5 h-5 text-gray-500"></i>
                                 <span class="text-sm text-gray-500 file-name">Pilih file KTP...</span>
                             </label>
@@ -248,7 +257,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
 
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-1.5">Pas Foto Formal</label>
-                            <label for="pas-foto" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                            <label for="pas-foto" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50">
                                 <i data-lucide="image" class="w-5 h-5 text-gray-500"></i>
                                 <span class="text-sm text-gray-500 file-name">Pilih foto...</span>
                             </label>
@@ -257,7 +266,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
 
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-1.5">Sertifikat MAPABA</label>
-                            <label for="sertifikat-mapaba" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                            <label for="sertifikat-mapaba" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50">
                                 <i data-lucide="file-check" class="w-5 h-5 text-gray-500"></i>
                                 <span class="text-sm text-gray-500 file-name">Pilih sertifikat...</span>
                             </label>
@@ -266,7 +275,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
 
                         <div class="animate-on-scroll">
                             <label class="block text-sm font-medium text-gray-700 mb-1.5">Surat Rekomendasi</label>
-                            <label for="surat-rekomendasi" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition bg-white hover:border-[#0973D6] hover:bg-blue-50">
+                            <label for="surat-rekomendasi" class="w-full flex items-center gap-3 p-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition hover:border-[#0973D6] hover:bg-blue-50">
                                 <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
                                 <span class="text-sm text-gray-500 file-name">Pilih surat...</span>
                             </label>
@@ -303,7 +312,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
         </div>
     </main>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer id="kontak" class="cta-gradient text-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
             <h2 class="text-2xl lg:text-3xl font-bold mb-4">Download Sekarang!</h2>
@@ -323,17 +332,22 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
         </div>
     </footer>
 
-    <!-- JAVASCRIPT UTAMA -->
+    <!-- JAVASCRIPT -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby2N0stIy98Jpdo0yyVXKPIXWC2IlqfjL5yNKMmjNgkaFuZ91eH_SaOhYDutsc2jIM/exec';
+        // --- 1. KONFIGURASI ---
+        // TEMPELKAN URL WEB APP DARI DEPLOYMENT BARU ANDA DI SINI
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby88UAgfjnxH7Hohg4DxNzvgGkGRALphmAwsp84GjK7AG-GnROHukUvVQvW_tddiK53/exec';
+
+        // --- 2. VARIABEL DOM ---
         const form = document.getElementById('registration-form');
         const submitButton = document.getElementById('submit-button');
         const statusMessage = document.getElementById('status-message');
         const buttonText = document.getElementById('button-text');
         const buttonSpinner = document.getElementById('button-spinner');
         
+        // --- 3. FUNGSI HELPER ---
         const showMessage = (message, type = 'info') => {
             statusMessage.textContent = message;
             statusMessage.className = `message-box ${type}`;
@@ -346,6 +360,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
             submitButton.disabled = isLoading;
         };
 
+        // Mengubah teks label input file saat file dipilih
         function setupFileInputs() {
             form.querySelectorAll('input[type="file"]').forEach(input => {
                 input.addEventListener("change", function() {
@@ -356,18 +371,26 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
             });
         }
 
+        // Membaca file menjadi Base64
+        const readFileAsDataURL = (file) => new Promise((resolve, reject) => {
+            if (!file) return reject(new Error("File tidak ditemukan."));
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = () => reject(new Error(`Gagal membaca file: ${file.name}`));
+            reader.readAsDataURL(file);
+        });
+
+        // Validasi Form Sederhana
         const validateForm = () => {
             let isValid = true;
             let firstInvalidField = null;
 
-            // Validasi text/select/textarea
             form.querySelectorAll('[required]').forEach(field => {
-                // Khusus radio button, cek apakah salah satu dalam group terpilih
                 if(field.type === 'radio') {
                     const name = field.name;
                     const group = form.querySelectorAll(`input[name="${name}"]`);
                     const isChecked = Array.from(group).some(radio => radio.checked);
-                    const container = field.closest('.radio-group'); // Parent visual untuk radio
+                    const container = field.closest('.radio-group');
                     
                     if (!isChecked) {
                         isValid = false;
@@ -376,8 +399,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
                     } else {
                         if(container) container.style.border = 'none';
                     }
-                } 
-                else {
+                } else {
                     field.classList.remove('border-red-500'); 
                     if (!field.value.trim()) {
                         isValid = false;
@@ -392,19 +414,12 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
             }
             return isValid;
         };
-        
-        const readFileAsDataURL = (file) => new Promise((resolve, reject) => {
-            if (!file) return reject(new Error("File tidak ditemukan."));
-            const reader = new FileReader();
-            reader.onload = () => resolve(reader.result);
-            reader.onerror = () => reject(new Error(`Gagal membaca file: ${file.name}`));
-            reader.readAsDataURL(file);
-        });
 
+        // --- 4. HANDLER UTAMA ---
         async function handleFormSubmit() {
             statusMessage.style.display = 'none';
             if (!validateForm()) {
-                showMessage("Harap isi semua kolom yang wajib diisi, termasuk pilihan radio button.", 'error');
+                showMessage("Harap isi semua kolom yang wajib diisi.", 'error');
                 return;
             }
 
@@ -414,43 +429,44 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
                 showMessage("Mengumpulkan data formulir...", 'info');
                 const formDataObject = {};
                 
-                // Mengambil data text, textarea, select, dan radio
                 const inputs = new FormData(form);
                 for (const [key, value] of inputs.entries()) {
                    formDataObject[key] = value;
                 }
 
-                // Konversi File Baru (Total 5 file: Portofolio, E-KTP, Pas Foto, Sertifikat MAPABA, Rekomendasi)
-                showMessage("Mengunggah berkas...", 'info');
+                showMessage("Mengunggah 5 Berkas...", 'info');
                 
-                const portofolioFile = document.getElementById('portofolio').files[0];
-                const eKtpFile = document.getElementById('e-ktp').files[0]; 
-                const pasFotoFile = document.getElementById('pas-foto').files[0];
-                const sertifikatMapabaFile = document.getElementById('sertifikat-mapaba').files[0]; 
-                const rekomendasiFile = document.getElementById('surat-rekomendasi').files[0];
+                // Ambil elemen file
+                const fileInputs = {
+                    portofolio: document.getElementById('portofolio').files[0],
+                    eKtp: document.getElementById('e-ktp').files[0],
+                    pasFoto: document.getElementById('pas-foto').files[0],
+                    sertifikatMapaba: document.getElementById('sertifikat-mapaba').files[0],
+                    rekomendasi: document.getElementById('surat-rekomendasi').files[0]
+                };
 
-                // Baca file secara paralel
+                // Baca semua file
                 const [portofolioB64, eKtpB64, pasFotoB64, sertifikatB64, rekomendasiB64] = await Promise.all([
-                    readFileAsDataURL(portofolioFile),
-                    readFileAsDataURL(eKtpFile),
-                    readFileAsDataURL(pasFotoFile),
-                    readFileAsDataURL(sertifikatMapabaFile),
-                    readFileAsDataURL(rekomendasiFile)
+                    readFileAsDataURL(fileInputs.portofolio),
+                    readFileAsDataURL(fileInputs.eKtp),
+                    readFileAsDataURL(fileInputs.pasFoto),
+                    readFileAsDataURL(fileInputs.sertifikatMapaba),
+                    readFileAsDataURL(fileInputs.rekomendasi)
                 ]);
                 
                 const payload = {
                     formData: formDataObject,
-                    // Struktur file disesuaikan
+                    // STRUKTUR KUNCI DI SINI SAMA DENGAN APPS SCRIPT
                     files: {
-                        portofolio: { name: portofolioFile.name, type: portofolioFile.type, data: portofolioB64.split(',')[1] },
-                        eKtp: { name: eKtpFile.name, type: eKtpFile.type, data: eKtpB64.split(',')[1] },
-                        pasFoto: { name: pasFotoFile.name, type: pasFotoFile.type, data: pasFotoB64.split(',')[1] },
-                        sertifikatMapaba: { name: sertifikatMapabaFile.name, type: sertifikatMapabaFile.type, data: sertifikatB64.split(',')[1] },
-                        rekomendasi: { name: rekomendasiFile.name, type: rekomendasiFile.type, data: rekomendasiB64.split(',')[1] }
+                        portofolio: { name: fileInputs.portofolio.name, type: fileInputs.portofolio.type, data: portofolioB64.split(',')[1] },
+                        eKtp: { name: fileInputs.eKtp.name, type: fileInputs.eKtp.type, data: eKtpB64.split(',')[1] },
+                        pasFoto: { name: fileInputs.pasFoto.name, type: fileInputs.pasFoto.type, data: pasFotoB64.split(',')[1] },
+                        sertifikatMapaba: { name: fileInputs.sertifikatMapaba.name, type: fileInputs.sertifikatMapaba.type, data: sertifikatB64.split(',')[1] },
+                        rekomendasi: { name: fileInputs.rekomendasi.name, type: fileInputs.rekomendasi.type, data: rekomendasiB64.split(',')[1] }
                     }
                 };
 
-                showMessage("Mengirim data ke server...", 'info');
+                showMessage("Mengirim ke server...", 'info');
                 const response = await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     body: JSON.stringify(payload),
@@ -460,11 +476,14 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
                 
                 if (!response.ok) throw new Error(`Server Error: ${response.status}`);
                 const result = await response.json();
-                if (result.status !== 'success') throw new Error(result.message || "Gagal menyimpan data.");
                 
-                showMessage("Pendaftaran Berhasil! Terima kasih.", 'success');
-                form.reset();
-                form.querySelectorAll('.file-name').forEach(span => span.textContent = 'Pilih file...');
+                if (result.status === 'success') {
+                    showMessage("Pendaftaran Berhasil! Terima kasih.", 'success');
+                    form.reset();
+                    form.querySelectorAll('.file-name').forEach(span => span.textContent = 'Pilih file...');
+                } else {
+                     throw new Error(result.message || "Gagal menyimpan data.");
+                }
 
             } catch (error) {
                 console.error(error);
@@ -479,7 +498,7 @@ description: Formulir Pendaftaran PMII Youth Innovation Conference “Data Inter
         }
         setupFileInputs();
 
-        // Animasi & UI Lainnya
+        // Animasi Scroll
         const preloader = document.getElementById('preloader');
         if (preloader) { setTimeout(() => { preloader.style.transition = "opacity .5s ease"; preloader.style.opacity = "0"; preloader.addEventListener("transitionend", () => preloader.style.display = "none"); }, 500); }
         const mobileMenuButton = document.getElementById('mobile-menu-button');
