@@ -4,7 +4,7 @@ title: "PKC PMII Bali Nusra Apresiasi Langkah Humanis Kejari Mataram Terapkan Re
 description: "PKC PMII Bali Nusra mengapresiasi Kejari Mataram atas penerapan Restorative Justice terhadap kader PMII, Iqbal Hari Saputra. Simak selengkapnya."
 date: 2025-12-01 10:00:00 +0800
 author: "PKC PMII Bali Nusa Tenggara"
-image: "assets/rilis/rilis28.png"
+image: "assets/rilis/rilis29.png"
 image_caption: "Proses kesepakatan restorative justice di Kejaksaan Negeri Mataram."
 categories:
   - Hukum
